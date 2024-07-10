@@ -52,14 +52,14 @@ export async function createTrip(app: FastifyInstance){
       }
     })
 
-    const mail = await getMailClient()
-
     const formattedTripStartDate = dayjs(starts_at).format('D[ de ]MMMM')
     const formattedTripEndDate = dayjs(ends_at).format('D[ de ]MMMM')
 
     const confirmationLink = new URL(
       `http://localhost:3333/trips/${trip.id}/confirm`
     )
+
+    const mail = await getMailClient()
 
     const message = await mail.sendMail({
       from: {
