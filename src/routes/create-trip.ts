@@ -85,6 +85,8 @@ export async function createTrip(app: FastifyInstance){
       `.trim()
     })
 
+    console.log(nodemailer.getTestMessageUrl(message))
+
     return {
       tripId: trip.id
     }

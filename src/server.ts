@@ -44,6 +44,6 @@ app.register(getActivities)
 app.register(createLink)
 app.register(getLinks)
 
-app.listen({ port: env.PORT }).then(() => {
+app.listen({ host: '0.0.0.0', port: env.PORT }).then(() => {
   console.log('Server is runnnig! 🚀')
 })
