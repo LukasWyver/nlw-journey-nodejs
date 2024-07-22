@@ -5,6 +5,7 @@ import { getLinks } from './routes/get-links';
 import { errorHandler } from './error-handler';
 import { createTrip } from './routes/create-trip'
 import { updateTrip } from './routes/update-trip';
+import { deleteTrip } from './routes/delete-trip';
 import { createLink } from './routes/create-link';
 import { confirmTrip } from './routes/confirm-trip';
 import { createInvite } from './routes/create-invite';
@@ -29,6 +30,7 @@ app.setErrorHandler(errorHandler)
 
 app.register(createTrip)
 app.register(updateTrip)
+app.register(deleteTrip)
 app.register(confirmTrip)
 app.register(getTripDetails)
 

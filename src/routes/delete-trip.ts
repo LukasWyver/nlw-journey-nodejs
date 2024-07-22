@@ -4,7 +4,7 @@ import { FastifyInstance } from "fastify";
 import { ClientError } from '../errors/client-error';
 import { ZodTypeProvider } from "fastify-type-provider-zod";
 
-export async function updateTrip(app: FastifyInstance){
+export async function deleteTrip(app: FastifyInstance){
   app.withTypeProvider<ZodTypeProvider>().delete('/trips/:tripId', {
     schema: {
       params: z.object({
